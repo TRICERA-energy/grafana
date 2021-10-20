@@ -1,0 +1,25 @@
+delete_notifiers:
+  - name: Demo
+    uid: demo
+    # either
+    org_id: 1
+    # or
+    #org_name: 
+
+notifiers:
+  - name: Demo
+    type: email
+    uid: demo
+    # either
+    org_id: 1
+    # or
+    #org_name: 
+    is_default: true
+    send_reminder: false
+    frequency: 0h
+    disable_resolve_message: false
+    # See https://grafana.com/docs/grafana/latest/administration/provisioning/#supported-settings for settings supported for each
+    # alert notification type.
+    settings:
+      singleEmail: true
+      addresses: stephan.thonig@tricera.energy
