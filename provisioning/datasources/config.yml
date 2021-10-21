@@ -30,4 +30,6 @@ datasources:
 - name: Prometheus
   type: prometheus
   enabled: true
+  url: http://prometheus.default.svc:9090
+  default: false
   editable: true
