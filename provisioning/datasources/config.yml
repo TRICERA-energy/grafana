@@ -5,6 +5,8 @@ deleteDatasources:
     orgId: 1
   - name: HTTP-API
     orgId: 1
+  - name: Prometheus
+    orgId: 1
 
 datasources:
 - name: HTTP-API
@@ -25,5 +27,7 @@ datasources:
     host: emqx-service
     port: 1883
     username: admin 
-    
-  
+- name: Prometheus
+  type: prometheus
+  enabled: true
+  editable: true
