@@ -9,3 +9,11 @@ providers:
   editable: true
   options:
     path: /etc/grafana/provisioning/dashboards
+- name: 'prometheus_overview'
+  orgId: 1
+  folder: ''
+  type: file
+  disableDeletion: false
+  editable: true
+  options:
+    path: /etc/grafana/provisioning/dashboards
