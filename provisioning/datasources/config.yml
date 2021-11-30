@@ -33,3 +33,5 @@ datasources:
   url: http://prometheus-kube-prometheus-prometheus:9090
   default: false
   editable: true
+  jsonData:
+    timeInterval: 1s
