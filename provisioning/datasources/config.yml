@@ -41,7 +41,9 @@ datasources:
   type: influxdb
   editable: true
   access: proxy
-  url: http://influxdb.default.svc:8086
+  user: admin
+  password: adminadmin
+  url: http://influxdb-influxdb2:8086
   secureJsonData:
     token: INFLUXTOKEN
   jsonData:
