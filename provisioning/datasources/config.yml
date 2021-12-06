@@ -39,6 +39,7 @@ datasources:
     timeInterval: 1s #custom timeInterval to manually change it in the dashboard
 - name: InfluxDB
   type: influxdb
+  editable: true
   access: proxy
   url: http://influxdb.default.svc:8086
   secureJsonData:
