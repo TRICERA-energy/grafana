@@ -51,3 +51,9 @@ datasources:
     organization: TRICERA
     defaultBucket: default
     tlsSkipVerify: true
+- name: Loki
+  type: loki
+  enabled: true
+  url: http://loki-stack:3100
+  editable: true
+  isDefault: false
