@@ -31,7 +31,7 @@ RUN yarn install
 RUN yarn build
 
 # Use the latest Grafana version as execution image
-FROM grafana/grafana:8.2.1
+FROM grafana/grafana:8.3.3
 
 # Copy the mqtt plugin into the image
 COPY --from=plugin-builder /usr/src/app/plugins/mqtt-datasource /var/lib/grafana/plugins/mqtt-datasource
