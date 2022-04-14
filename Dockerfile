@@ -23,7 +23,8 @@ RUN go run bootstrap.go
 WORKDIR /usr/src/app/plugins/
 
 # Clone the mqtt datasource plugin and build it    
-RUN git clone https://github.com/Tricera-Hendrik-Weiss/mqtt-datasource.git
+#RUN git clone https://github.com/Tricera-Hendrik-Weiss/mqtt-datasource.git
+RUN git clone https://github.com/grafana/mqtt-datasource.git
 
 WORKDIR /usr/src/app/plugins/mqtt-datasource
 
@@ -31,13 +32,13 @@ RUN yarn install
 RUN yarn build
 
 # Use the latest Grafana version as execution image
-FROM grafana/grafana:8.3.3
+FROM grafana/grafana:8.4.6
 
 # Copy the mqtt plugin into the image
 COPY --from=plugin-builder /usr/src/app/plugins/mqtt-datasource /var/lib/grafana/plugins/mqtt-datasource
 
 # Provision Grafana (Dashboards, Alerts, Datasources)
-COPY ./provisioning/ /etc/grafana/provisioning
+#COPY ./provisioning/ /etc/grafana/provisioning
 
 # Overwrite default Grafana images - EXPERIMENTAL
 COPY ./grafana_icon.svg /usr/share/grafana/public/img
